@@ -8,11 +8,11 @@
 * Elección del dataset: Después de revisar la documentación y la página oficial del Sistema Nacional de Información de la Calidad del Aire (SINAICA) se decidió trabajar con los archivos:
   stations_daily.csv y stations_rsinaica.csv.
 * Exploración de los datos: Realizamos una unión de las columnas station_id, station_name y network_name entre stations_daily.csv y stations_rsinaica.csv. Con el objetivo de obtener solo
-  los datos correspondientes a la Ciudad de México. 
+  los datos correspondientes a la Ciudad de México.
+* Elección de variables: Se realizo una matriz de correlación para decidir que datos usaríamos para el modelo de regresión.
 * Modelo 1: Decidimos estimar la columna NO2 mediante un modelo de Regresión Lineal Múltiple con las columnas de O3, CO y PM2.5.
-   - Variables: Se realizo una matriz de correlación para decidir que datos usaríamos para el modelo de regresión.
-* Modelo 2:
-* Modelo 3:
+* Modelo 2: Random Forest Regressor con las columnas de O3, CO y PM2.5.
+* Modelo 3: Gradient Boosting Regressor con las columnas de O3, CO y PM2.5.
 * Imputación:
   - Atípicos: Se analizo la existencia de atípicos mediante diagramas de caja y bigotes. Al notar que existían más atípicos de los esperados, se consulto bibliografía para
     encontrar la mejor estrategia de manipulación.
