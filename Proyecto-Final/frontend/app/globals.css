@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+  --background: #F5F3EC;
+  --foreground: #1E201D;
+  --card: #EBE7DC;
+  --card-foreground: #1E201D;
+  --popover: #F5F3EC;
+  --popover-foreground: #1E201D;
+  --primary: #4A5335;
+  --primary-foreground: #FFFFFF;
+  --secondary: #7D8A62;
+  --secondary-foreground: #FFFFFF;
+  --muted: #EBE7DC;
+  --muted-foreground: #5A5D54;
+  --accent: #7D8A62;
+  --accent-foreground: #FFFFFF;
+  --destructive: #A66A52;
+  --border: #D6D1C2;
+  --input: #D6D1C2;
+  --ring: #7D8A62;
+  --chart-1: #4A5335;
+  --chart-2: #7D8A62;
+  --chart-3: #2C331F;
+  --chart-4: #A9AD91;
+  --chart-5: #D6B76A;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+}
+.eyebrow { color: #7D8A62; font-size: 10px; font-weight: 600; letter-spacing: .14em; line-height: 1.5; text-transform: uppercase; }
+.section-title { margin-top: 4px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.75rem; letter-spacing: -.035em; line-height: 1.15; }
+.chart-title { margin-top: 5px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.28rem; font-weight: 500; letter-spacing: -.025em; }
+.metric-card { border-color: #D6D1C2; background: #EBE7DC; box-shadow: none; }
